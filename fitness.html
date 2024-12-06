@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness App UI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .card h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #007BFF;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .btn {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .footer-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888;
+        }
+
+        .home {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .home .section {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .home .section h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .home .section p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .navbar {
+            background: #007BFF;
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="container">
+        <div class="card">
+            <h1>Fitness App</h1>
+            <form>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p class="footer-text">Don't have an account? Sign up</p>
+        </div>
+    </div>
+
+    <!-- Home Page -->
+    <div id="homePage" class="container" style="display:none;">
+        <div class="navbar">Welcome, User</div>
+        <div class="home">
+            <div class="section">
+                <h2>Today's Workout</h2>
+                <p>Stay fit with a custom workout plan designed for you.</p>
+            </div>
+            <div class="section">
+                <h2>Track Progress</h2>
+                <p>View your fitness stats and track your progress.</p>
+            </div>
+            <div class="section">
+                <h2>Nutrition Tips</h2>
+                <p>Healthy eating guides tailored to your goals.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple script to toggle between pages (for demo purposes)
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('loginPage').style.display = 'none';
+            document.getElementById('homePage').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
