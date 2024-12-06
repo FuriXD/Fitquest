@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Gamification</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Fitquest</h1>
+        <p>Your personalized fitness journey starts here!</p>
+    </header>
+
+    <main>
+        <!-- User Input Section -->
+        <section class="user-input">
+            <h2>Enter Your Details</h2>
+            <form id="fitness-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+                
+                <label for="age">Age:</label>
+                <input type="number" id="age" required>
+                
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" required>
+                
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" required>
+                
+                <label for="sex">Sex:</label>
+                <select id="sex" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                
+                <label for="exercise-time">How much time can you spend daily for exercise? (minutes)</label>
+                <input type="number" id="exercise-time" required>
+
+                <label for="goal">What is your goal?</label>
+                <select id="goal" required>
+                    <option value="maintain">Maintain Weight</option>
+                    <option value="burn">Burn Fat</option>
+                    <option value="muscle">Gain Muscle Mass</option>
+                </select>
+
+                <button type="submit">Generate Plan</button>
+            </form>
+        </section>
+
+        <!-- BMI and Recommendations -->
+        <section class="bmi-section">
+            <h2>Your BMI and Recommendations</h2>
+            <p id="bmi-output">Your BMI: <span id="bmi-value">--</span></p>
+            <p id="bmi-category">Category: <span id="bmi-cat">--</span></p>
+            <div id="recommendations">
+                <!-- Personalized recommendations will be displayed here -->
+            </div>
+        </section>
+
+        <!-- Leaderboard -->
+        <section class="leaderboard">
+            <h2>Leaderboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                    <!-- Dynamic leaderboard rows will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Body Diagram -->
+        <section class="body-diagram">
+            <h2>Your Body</h2>
+            <img id="body-image" src="default-body.png" alt="Body Diagram">
+        </section>
+
+        <!-- Community Tab -->
+        <section class="community-tab">
+            <h2>Community Interaction</h2>
+            <textarea id="community-input" placeholder="Share your thoughts..."></textarea>
+            <button id="post-button">Post</button>
+            <div id="community-posts">
+                <!-- User posts will be displayed here -->
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="reviews">
+            <h2>User Reviews</h2>
+            <p>"This platform transformed my fitness journey!" - John Doe</p>
+            <p>"I love how personalized and easy-to-use it is!" - Jane Smith</p>
+            <p>"Great for staying motivated!" - Celebrity Trainer</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Fitquest | All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

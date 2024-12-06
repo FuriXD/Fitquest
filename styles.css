@@ -1,0 +1,83 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #4caf50;
+}
+
+section {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+label, p, h2 {
+    margin-bottom: 1rem;
+    color: #4caf50;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+button {
+    background-color: #4caf50;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+th {
+    background-color: #4caf50;
+    color: white;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1f1f1f;
+} 
